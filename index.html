@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCX Проверка параметров</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DOCX Проверка параметров</h1>
+            <p>Загрузите DOCX файл для анализа всех необходимых параметров</p>
+        </div>
+        
+        <div class="upload-area">
+            <div class="file-input-wrapper">
+                <input type="file" id="fileInput" accept=".docx">
+                <label for="fileInput" class="file-label">Выберите DOCX файл</label>
+            </div>
+            <div class="file-info" id="fileInfo"></div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Анализ документа...</p>
+        </div>
+        
+        <div class="results" id="results">
+            <div class="summary" id="summary"></div>
+            <button class="export-btn" onclick="window.exportResults()">Экспортировать результаты</button>
+            <div class="parameters-grid" id="parametersGrid"></div>
+        </div>
+    </div>
+
+    <!-- Подключаем необходимые библиотеки -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
